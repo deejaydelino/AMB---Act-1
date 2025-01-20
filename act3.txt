@@ -1,0 +1,47 @@
+import React, {useState} from 'react';
+import {Text, StyleSheet} from 'react-native';
+import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+
+const TextInANest = () => {
+  const [titleText, setTitleText] = useState("Paner, Dionisio Jr B.");
+  const bodyText = 'hii when we doing our sysarch 1 and 2, napaka hustle tsaka most of my group mates are working stud so we have to set a proper schedule when will all of us will be available, on sysarch 1 most of the work is napasa sakin kasi porte ko naman yung pag d-document so i did most of the work even sa pag gawa ng flowchart etc. dito ko na experience na matulog ng late and byumahe ng gabing gabi para lang maka punta sa bahay ng classmates ko kasi in that place is our working station also i am working student din kaya napaka struggle din lalo na yung last defense namin like we totally have not sleep as we work on revisions, and more appealing and im a documentator and minsan tumulong sa pag gawa ng system like yung nag bibigay ng suggestions kung pano ba to o ano mas magandang gawin to make our system, tsaka i always telling myself na bawal mag give up whatever na mangyari';
+
+  const onPressTitle = () => {
+    setTitleText("bembang theory [pressed]");
+  };
+
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <Text style={styles.baseText}>
+          <Text style={styles.titleText} onPress={onPressTitle}>
+            {titleText}
+            {'\n'}
+            {'\n'}
+          </Text style={styles.baseText} >
+          <Text numberOfLines={15}>{bodyText}</Text>
+        </Text>
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  baseText: {
+    fontFamily: 'Cochin',
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  bodyText: {
+    fontSize: 15
+  }
+  innerText: {
+    color: 'red',
+});
+
+export default TextInANest;

@@ -1,0 +1,29 @@
+import React from 'react';
+import {View, Text, Image, ScrollView, TextInput} from 'react-native';
+
+const App = () => {
+  return (
+    <ScrollView >
+      <Text>Paner, Dionisio Jr</Text>
+      <View>
+        <Text>First Activity on ADVMOB</Text>
+        <Image
+          source={{
+            uri: 'https://i.pinimg.com/originals/14/58/8f/14588fa9aca2fab5d79c95b49e4ed830.jpg',
+          }}
+          style={{width: 200, height: 200}}
+        />
+      </View>
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: 'gray',
+          borderWidth: 1,
+        }}
+        defaultValue="pls"
+      />
+    </ScrollView>
+  );
+};
+
+export default App;
